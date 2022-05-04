@@ -1,10 +1,13 @@
 import { ChatTeardropDots } from 'phosphor-react';
 import { Popover } from '@headlessui/react';
+import { WidgetForm } from './WidgetForm';
 
 export default function Widget() {
     return (
-        <Popover className='absolute bottom-5 right-5'>
-            <Popover.Panel>Hello World</Popover.Panel>
+        <Popover className='absolute bottom-5 right-5 md:bottom-10 md:right-10 flex flex-col items-end'>
+            <Popover.Panel>
+                <WidgetForm />
+            </Popover.Panel>
 
             <Popover.Button className='bg-brand-500 rounded-full p-3 text-white flex items-center group'>
                 <ChatTeardropDots className='w-10 h-10' />
